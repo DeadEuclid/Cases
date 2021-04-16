@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Cases
 {
-    public partial class Form3 : Form
+    public partial class SearchControl : UserControl
     {
-        public Form3()
+        public SearchControl()
         {
             InitializeComponent();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

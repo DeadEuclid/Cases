@@ -1,7 +1,7 @@
 ﻿
 namespace Cases
 {
-    partial class UserControl2
+    partial class ReportsControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

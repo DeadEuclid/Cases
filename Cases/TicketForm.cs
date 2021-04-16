@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Cases
 {
-    public partial class UserControl1 : UserControl
+    public partial class TicketForm : Form
     {
-        public UserControl1()
+        public TicketForm()
         {
             InitializeComponent();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

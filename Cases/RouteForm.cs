@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Cases
 {
-    public partial class UserControl2 : UserControl
+    public partial class RouteForm : Form
     {
-        public UserControl2()
+        public RouteForm()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserControl2_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

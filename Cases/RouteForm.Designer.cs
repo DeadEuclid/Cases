@@ -1,7 +1,7 @@
 ﻿
 namespace Cases
 {
-    partial class Form2
+    partial class RouteForm
     {
         /// <summary>
         /// Required designer variable.

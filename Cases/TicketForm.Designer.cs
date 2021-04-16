@@ -1,7 +1,7 @@
 ﻿
 namespace Cases
 {
-    partial class Form3
+    partial class TicketForm
     {
         /// <summary>
         /// Required designer variable.

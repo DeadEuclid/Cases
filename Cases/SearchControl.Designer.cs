@@ -1,7 +1,7 @@
 ﻿
 namespace Cases
 {
-    partial class UserControl1
+    partial class SearchControl
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
