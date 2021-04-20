@@ -50,6 +50,12 @@ namespace Cases
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeTable = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartureTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Departure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Destination = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.SellReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,20 +67,22 @@ namespace Cases
             // 
             this.tabControl1.Controls.Add(this.SellReport);
             this.tabControl1.Controls.Add(this.RouteReport);
-            this.tabControl1.Location = new System.Drawing.Point(11, 61);
+            this.tabControl1.Location = new System.Drawing.Point(16, 95);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1146, 453);
+            this.tabControl1.Size = new System.Drawing.Size(2004, 708);
             this.tabControl1.TabIndex = 1;
             // 
             // SellReport
             // 
             this.SellReport.Controls.Add(this.dataGridView1);
             this.SellReport.Controls.Add(this.button1);
-            this.SellReport.Location = new System.Drawing.Point(4, 25);
+            this.SellReport.Location = new System.Drawing.Point(4, 34);
+            this.SellReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SellReport.Name = "SellReport";
-            this.SellReport.Padding = new System.Windows.Forms.Padding(3);
-            this.SellReport.Size = new System.Drawing.Size(1138, 424);
+            this.SellReport.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SellReport.Size = new System.Drawing.Size(1996, 670);
             this.SellReport.TabIndex = 0;
             this.SellReport.Text = "Отчёт о продаже билетов";
             this.SellReport.UseVisualStyleBackColor = true;
@@ -92,12 +100,14 @@ namespace Cases
             this.Column8,
             this.Column7,
             this.Column9});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 6);
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 9);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1123, 372);
+            this.dataGridView1.Size = new System.Drawing.Size(1960, 581);
             this.dataGridView1.TabIndex = 22;
             // 
             // Column1
@@ -165,9 +175,10 @@ namespace Cases
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(873, 474);
+            this.button1.Location = new System.Drawing.Point(1310, 741);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.Size = new System.Drawing.Size(154, 36);
             this.button1.TabIndex = 1;
             this.button1.Text = "Распечатать";
             this.button1.UseVisualStyleBackColor = true;
@@ -177,18 +188,20 @@ namespace Cases
             this.RouteReport.Controls.Add(this.button2);
             this.RouteReport.Controls.Add(this.dataGridView2);
             this.RouteReport.Location = new System.Drawing.Point(4, 25);
+            this.RouteReport.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RouteReport.Name = "RouteReport";
-            this.RouteReport.Padding = new System.Windows.Forms.Padding(3);
-            this.RouteReport.Size = new System.Drawing.Size(1138, 424);
+            this.RouteReport.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RouteReport.Size = new System.Drawing.Size(1996, 679);
             this.RouteReport.TabIndex = 1;
             this.RouteReport.Text = "Отчёт о востребованости рейсов";
             this.RouteReport.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(873, 473);
+            this.button2.Location = new System.Drawing.Point(1310, 739);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 23);
+            this.button2.Size = new System.Drawing.Size(154, 36);
             this.button2.TabIndex = 3;
             this.button2.Text = "Рспечатать";
             this.button2.UseVisualStyleBackColor = true;
@@ -196,58 +209,113 @@ namespace Cases
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 5);
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Num,
+            this.TimeTable,
+            this.DepartureTime,
+            this.Departure,
+            this.Destination,
+            this.Column10});
+            this.dataGridView2.Location = new System.Drawing.Point(9, 8);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(970, 452);
+            this.dataGridView2.Size = new System.Drawing.Size(1455, 706);
             this.dataGridView2.TabIndex = 2;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(349, 35);
+            this.dateTimePicker2.Location = new System.Drawing.Point(524, 55);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(298, 30);
             this.dateTimePicker2.TabIndex = 30;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(296, 34);
+            this.label2.Location = new System.Drawing.Point(444, 53);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 17);
+            this.label2.Size = new System.Drawing.Size(34, 25);
             this.label2.TabIndex = 29;
             this.label2.Text = "по";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(61, 33);
+            this.dateTimePicker1.Location = new System.Drawing.Point(92, 52);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(298, 30);
             this.dateTimePicker1.TabIndex = 28;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 32);
+            this.label1.Location = new System.Drawing.Point(12, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.Size = new System.Drawing.Size(22, 25);
             this.label1.TabIndex = 27;
             this.label1.Text = "с";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 13);
+            this.label3.Location = new System.Drawing.Point(15, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
+            this.label3.Size = new System.Drawing.Size(171, 25);
             this.label3.TabIndex = 31;
             this.label3.Text = "Отчёт за период";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // Num
+            // 
+            this.Num.HeaderText = "№";
+            this.Num.MinimumWidth = 6;
+            this.Num.Name = "Num";
+            this.Num.Width = 125;
+            // 
+            // TimeTable
+            // 
+            this.TimeTable.HeaderText = "График";
+            this.TimeTable.MinimumWidth = 6;
+            this.TimeTable.Name = "TimeTable";
+            this.TimeTable.Width = 125;
+            // 
+            // DepartureTime
+            // 
+            this.DepartureTime.HeaderText = "Время отправления";
+            this.DepartureTime.MinimumWidth = 6;
+            this.DepartureTime.Name = "DepartureTime";
+            this.DepartureTime.Width = 125;
+            // 
+            // Departure
+            // 
+            this.Departure.HeaderText = "Место отправления";
+            this.Departure.MinimumWidth = 6;
+            this.Departure.Name = "Departure";
+            this.Departure.Width = 125;
+            // 
+            // Destination
+            // 
+            this.Destination.HeaderText = "Место прибытия";
+            this.Destination.MinimumWidth = 6;
+            this.Destination.Name = "Destination";
+            this.Destination.Width = 125;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Процент занятых";
+            this.Column10.MinimumWidth = 6;
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 125;
+            // 
             // ReportsControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker2);
@@ -255,8 +323,10 @@ namespace Cases
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ReportsControl";
-            this.Size = new System.Drawing.Size(1179, 539);
+            this.Size = new System.Drawing.Size(1920, 1080);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.tabControl1.ResumeLayout(false);
             this.SellReport.ResumeLayout(false);
@@ -291,5 +361,11 @@ namespace Cases
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         public System.Windows.Forms.TabPage SellReport;
         public System.Windows.Forms.TabPage RouteReport;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepartureTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Departure;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Destination;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
     }
 }

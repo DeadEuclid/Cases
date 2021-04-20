@@ -15,17 +15,21 @@ namespace Cases
         public MainForm()
         {
             InitializeComponent();
-            var pageControls = tabControl1.TabPages[0].Controls;
-            if (pageControls.Count != 0)
-            {
-                pageControls.Clear();
-                pageControls.Add(new ReportsControl());
-            }
-        }
 
+        }
+        SearchControl SC = new SearchControl { AutoSize = true };
+        ReportsControl RC = new ReportsControl { AutoSize = true };
         private void продажаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(SC);
 
+        }
+
+        private void отчётыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            panel1.Controls.Add(RC);
         }
     }
 }
