@@ -30,17 +30,8 @@ namespace Cases
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.SellReport = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,74 +41,43 @@ namespace Cases
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.RouteReport = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.SellReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.RouteReport.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.SellReport);
+            this.tabControl1.Controls.Add(this.RouteReport);
             this.tabControl1.Location = new System.Drawing.Point(11, 61);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1146, 453);
             this.tabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // SellReport
             // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1138, 424);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Отчёт о продаже билетов";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.dataGridView2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1138, 424);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Отчёт о востребованости рейсов";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(873, 474);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Распечатать";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(873, 473);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Рспечатать";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 5);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(970, 452);
-            this.dataGridView2.TabIndex = 2;
+            this.SellReport.Controls.Add(this.dataGridView1);
+            this.SellReport.Controls.Add(this.button1);
+            this.SellReport.Location = new System.Drawing.Point(4, 25);
+            this.SellReport.Name = "SellReport";
+            this.SellReport.Padding = new System.Windows.Forms.Padding(3);
+            this.SellReport.Size = new System.Drawing.Size(1138, 424);
+            this.SellReport.TabIndex = 0;
+            this.SellReport.Text = "Отчёт о продаже билетов";
+            this.SellReport.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -139,48 +99,6 @@ namespace Cases
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1123, 372);
             this.dataGridView1.TabIndex = 22;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(349, 35);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker2.TabIndex = 30;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(296, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 17);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "по";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(61, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 28;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 17);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "с";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "Отчёт за период";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // Column1
             // 
@@ -245,7 +163,89 @@ namespace Cases
             this.Column9.Name = "Column9";
             this.Column9.Width = 125;
             // 
-            // UserControl2
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(873, 474);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Распечатать";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // RouteReport
+            // 
+            this.RouteReport.Controls.Add(this.button2);
+            this.RouteReport.Controls.Add(this.dataGridView2);
+            this.RouteReport.Location = new System.Drawing.Point(4, 25);
+            this.RouteReport.Name = "RouteReport";
+            this.RouteReport.Padding = new System.Windows.Forms.Padding(3);
+            this.RouteReport.Size = new System.Drawing.Size(1138, 424);
+            this.RouteReport.TabIndex = 1;
+            this.RouteReport.Text = "Отчёт о востребованости рейсов";
+            this.RouteReport.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(873, 473);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 23);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Рспечатать";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 5);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(970, 452);
+            this.dataGridView2.TabIndex = 2;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(349, 35);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(296, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(24, 17);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "по";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(61, 33);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 17);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "с";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(10, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 17);
+            this.label3.TabIndex = 31;
+            this.label3.Text = "Отчёт за период";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // ReportsControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -255,14 +255,14 @@ namespace Cases
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
-            this.Name = "UserControl2";
+            this.Name = "ReportsControl";
             this.Size = new System.Drawing.Size(1179, 539);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.SellReport.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.RouteReport.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -271,9 +271,7 @@ namespace Cases
         #endregion
 
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -291,5 +289,7 @@ namespace Cases
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        public System.Windows.Forms.TabPage SellReport;
+        public System.Windows.Forms.TabPage RouteReport;
     }
 }

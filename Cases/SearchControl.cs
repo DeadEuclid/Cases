@@ -15,6 +15,7 @@ namespace Cases
         public SearchControl()
         {
             InitializeComponent();
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace Cases
 {
@@ -15,6 +16,8 @@ namespace Cases
         public ReportsControl()
         {
             InitializeComponent();
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)

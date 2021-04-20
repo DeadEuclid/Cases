@@ -15,6 +15,12 @@ namespace Cases
         public MainForm()
         {
             InitializeComponent();
+            var pageControls = tabControl1.TabPages[0].Controls;
+            if (pageControls.Count != 0)
+            {
+                pageControls.Clear();
+                pageControls.Add(new ReportsControl());
+            }
         }
 
         private void продажаToolStripMenuItem_Click(object sender, EventArgs e)
