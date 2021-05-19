@@ -15,7 +15,7 @@ namespace Cases
         public MainForm()
         {
             InitializeComponent();
-
+            продажаToolStripMenuItem_Click(null, null);
         }
         SearchControl SC = new SearchControl { AutoSize = true };
         ReportsControl RC = new ReportsControl { AutoSize = true };

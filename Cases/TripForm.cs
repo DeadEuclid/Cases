@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Cases
 {
-    public partial class RouteForm : Form
+    public partial class TripForm : Form
     {
-        public RouteForm()
+        public TripForm()
         {
             InitializeComponent();
         }

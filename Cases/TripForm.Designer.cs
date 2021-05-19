@@ -1,7 +1,7 @@
 ﻿
 namespace Cases
 {
-    partial class RouteForm
+    partial class TripForm
     {
         /// <summary>
         /// Required designer variable.
@@ -76,9 +76,9 @@ namespace Cases
             this.label18.Location = new System.Drawing.Point(14, 34);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 25);
+            this.label18.Size = new System.Drawing.Size(95, 25);
             this.label18.TabIndex = 5;
-            this.label18.Text = "№ поезда:";
+            this.label18.Text = "№ рейса:";
             // 
             // label4
             // 

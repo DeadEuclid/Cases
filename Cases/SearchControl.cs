@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,25 @@ namespace Cases
             InitializeComponent();
 
         }
+
+        private void comboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+    public class SearchCore
+    {
+
+        
+        SearchCore()
+        { 
+        
+        }
+        
     }
 }
