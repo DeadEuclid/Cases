@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Viewer;
 
 namespace Cases
 {
     public partial class TripForm : Form
     {
-        public TripForm()
+        public TripForm(Trip trip)
         {
             InitializeComponent();
         }

@@ -1,4 +1,4 @@
-﻿using DB_Brige;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,8 +16,9 @@ namespace Cases
         public TicketForm()
         {
             InitializeComponent();
+
         }
-        StationContext stationContext=new StationContext();
+       // StationContext stationContext=new StationContext();
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -25,8 +26,8 @@ namespace Cases
 
         private void button1_Click(object sender, EventArgs e)
         {
-            stationContext.Tickets.Add();
-            stationContext.SaveChanges();
+            //stationContext.Tickets.Add();
+            //stationContext.SaveChanges();
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

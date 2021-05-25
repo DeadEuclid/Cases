@@ -29,30 +29,28 @@ namespace Cases
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Exem = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.wagonNum = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.seatNum = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Surname = new System.Windows.Forms.TextBox();
+            this.FirstName = new System.Windows.Forms.TextBox();
+            this.Middlename = new System.Windows.Forms.TextBox();
+            this.pasportNum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.pasportSeria = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.exemType = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.Price = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -67,39 +65,17 @@ namespace Cases
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // Exem
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(386, 234);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(185, 29);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Наличее льготы";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1 класс",
-            "2 класс"});
-            this.comboBox1.Location = new System.Drawing.Point(386, 131);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(180, 33);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 131);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Класс вагона";
+            this.Exem.AutoSize = true;
+            this.Exem.Location = new System.Drawing.Point(386, 234);
+            this.Exem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Exem.Name = "Exem";
+            this.Exem.Size = new System.Drawing.Size(185, 29);
+            this.Exem.TabIndex = 2;
+            this.Exem.Text = "Наличее льготы";
+            this.Exem.UseVisualStyleBackColor = true;
+            this.Exem.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label7
             // 
@@ -111,17 +87,17 @@ namespace Cases
             this.label7.TabIndex = 9;
             this.label7.Text = "Номер вагона";
             // 
-            // comboBox2
+            // wagonNum
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.wagonNum.FormattingEnabled = true;
+            this.wagonNum.Items.AddRange(new object[] {
             "1 класс",
             "2 класс"});
-            this.comboBox2.Location = new System.Drawing.Point(386, 38);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(180, 33);
-            this.comboBox2.TabIndex = 8;
+            this.wagonNum.Location = new System.Drawing.Point(386, 38);
+            this.wagonNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.wagonNum.Name = "wagonNum";
+            this.wagonNum.Size = new System.Drawing.Size(180, 33);
+            this.wagonNum.TabIndex = 8;
             // 
             // label8
             // 
@@ -133,17 +109,17 @@ namespace Cases
             this.label8.TabIndex = 11;
             this.label8.Text = "Номер места";
             // 
-            // comboBox3
+            // seatNum
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.seatNum.FormattingEnabled = true;
+            this.seatNum.Items.AddRange(new object[] {
             "1 класс",
             "2 класс"});
-            this.comboBox3.Location = new System.Drawing.Point(386, 84);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(180, 33);
-            this.comboBox3.TabIndex = 10;
+            this.seatNum.Location = new System.Drawing.Point(386, 84);
+            this.seatNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.seatNum.Name = "seatNum";
+            this.seatNum.Size = new System.Drawing.Size(180, 33);
+            this.seatNum.TabIndex = 10;
             // 
             // label9
             // 
@@ -175,37 +151,38 @@ namespace Cases
             this.label11.TabIndex = 14;
             this.label11.Text = "Имя";
             // 
-            // textBox1
+            // Surname
             // 
-            this.textBox1.Location = new System.Drawing.Point(386, 23);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(180, 30);
-            this.textBox1.TabIndex = 17;
+            this.Surname.Location = new System.Drawing.Point(386, 23);
+            this.Surname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Surname.Name = "Surname";
+            this.Surname.Size = new System.Drawing.Size(180, 30);
+            this.Surname.TabIndex = 17;
             // 
-            // textBox2
+            // FirstName
             // 
-            this.textBox2.Location = new System.Drawing.Point(386, 62);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(180, 30);
-            this.textBox2.TabIndex = 18;
+            this.FirstName.Location = new System.Drawing.Point(386, 62);
+            this.FirstName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.FirstName.Name = "FirstName";
+            this.FirstName.Size = new System.Drawing.Size(180, 30);
+            this.FirstName.TabIndex = 18;
+            this.FirstName.Text = "\r\n";
             // 
-            // textBox3
+            // Middlename
             // 
-            this.textBox3.Location = new System.Drawing.Point(386, 103);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 30);
-            this.textBox3.TabIndex = 19;
+            this.Middlename.Location = new System.Drawing.Point(386, 103);
+            this.Middlename.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Middlename.Name = "Middlename";
+            this.Middlename.Size = new System.Drawing.Size(180, 30);
+            this.Middlename.TabIndex = 19;
             // 
-            // textBox4
+            // pasportNum
             // 
-            this.textBox4.Location = new System.Drawing.Point(386, 191);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(180, 30);
-            this.textBox4.TabIndex = 21;
+            this.pasportNum.Location = new System.Drawing.Point(386, 191);
+            this.pasportNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pasportNum.Name = "pasportNum";
+            this.pasportNum.Size = new System.Drawing.Size(180, 30);
+            this.pasportNum.TabIndex = 21;
             // 
             // label13
             // 
@@ -245,13 +222,13 @@ namespace Cases
             this.label16.TabIndex = 25;
             this.label16.Text = "Серия паспорта";
             // 
-            // textBox5
+            // pasportSeria
             // 
-            this.textBox5.Location = new System.Drawing.Point(386, 147);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(180, 30);
-            this.textBox5.TabIndex = 24;
+            this.pasportSeria.Location = new System.Drawing.Point(386, 147);
+            this.pasportSeria.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pasportSeria.Name = "pasportSeria";
+            this.pasportSeria.Size = new System.Drawing.Size(180, 30);
+            this.pasportSeria.TabIndex = 24;
             // 
             // label12
             // 
@@ -263,21 +240,21 @@ namespace Cases
             this.label12.TabIndex = 27;
             this.label12.Text = "Тип льготы";
             // 
-            // comboBox4
+            // exemType
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.exemType.FormattingEnabled = true;
+            this.exemType.Items.AddRange(new object[] {
             "1 класс",
             "2 класс"});
-            this.comboBox4.Location = new System.Drawing.Point(386, 277);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(180, 33);
-            this.comboBox4.TabIndex = 26;
+            this.exemType.Location = new System.Drawing.Point(386, 277);
+            this.exemType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.exemType.Name = "exemType";
+            this.exemType.Size = new System.Drawing.Size(180, 33);
+            this.exemType.TabIndex = 26;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(882, 730);
+            this.button1.Location = new System.Drawing.Point(875, 610);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 45);
@@ -290,27 +267,27 @@ namespace Cases
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.Location = new System.Drawing.Point(994, 656);
+            this.label17.Location = new System.Drawing.Point(1016, 554);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 25);
             this.label17.TabIndex = 29;
             this.label17.Text = "Цена:";
             // 
-            // label20
+            // Price
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label20.Location = new System.Drawing.Point(1066, 656);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(54, 25);
-            this.label20.TabIndex = 30;
-            this.label20.Text = "ХХХ";
+            this.Price.AutoSize = true;
+            this.Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Price.Location = new System.Drawing.Point(1088, 555);
+            this.Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Price.Name = "Price";
+            this.Price.Size = new System.Drawing.Size(54, 25);
+            this.Price.TabIndex = 30;
+            this.Price.Text = "ХХХ";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(18, 730);
+            this.button2.Location = new System.Drawing.Point(13, 612);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 45);
@@ -321,16 +298,14 @@ namespace Cases
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.wagonNum);
+            this.groupBox2.Controls.Add(this.seatNum);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(18, 132);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(591, 192);
+            this.groupBox2.Size = new System.Drawing.Size(591, 128);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные о месте";
@@ -338,23 +313,23 @@ namespace Cases
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.Exem);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.textBox1);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.Surname);
+            this.groupBox3.Controls.Add(this.FirstName);
             this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.textBox3);
-            this.groupBox3.Controls.Add(this.comboBox4);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.Middlename);
+            this.groupBox3.Controls.Add(this.exemType);
+            this.groupBox3.Controls.Add(this.pasportNum);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Location = new System.Drawing.Point(13, 353);
+            this.groupBox3.Controls.Add(this.pasportSeria);
+            this.groupBox3.Location = new System.Drawing.Point(13, 270);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox3.Size = new System.Drawing.Size(585, 328);
+            this.groupBox3.Size = new System.Drawing.Size(596, 328);
             this.groupBox3.TabIndex = 33;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Данные о пасажире";
@@ -363,7 +338,7 @@ namespace Cases
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label21.Location = new System.Drawing.Point(1116, 656);
+            this.label21.Location = new System.Drawing.Point(1150, 555);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(23, 25);
@@ -430,13 +405,13 @@ namespace Cases
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 788);
+            this.ClientSize = new System.Drawing.Size(1200, 662);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label20);
+            this.Controls.Add(this.Price);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
@@ -444,7 +419,7 @@ namespace Cases
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "TicketForm";
-            this.Text = "лллл";
+            this.Text = "Оформление билета";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -457,30 +432,28 @@ namespace Cases
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox Exem;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox wagonNum;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox seatNum;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Surname;
+        private System.Windows.Forms.TextBox FirstName;
+        private System.Windows.Forms.TextBox Middlename;
+        private System.Windows.Forms.TextBox pasportNum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox pasportSeria;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox exemType;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label Price;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
