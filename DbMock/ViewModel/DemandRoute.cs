@@ -2,7 +2,7 @@
 using Viewer;
 
 
-namespace Cases.ViewModel
+namespace DbMock
 {
    public class DemandRoute
     {

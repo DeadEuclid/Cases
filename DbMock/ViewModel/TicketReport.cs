@@ -3,7 +3,7 @@ using AutoGrid;
 using Viewer;
 
 
-namespace Cases.ViewModel
+namespace DbMock
 {
     public class TicketReport
     {

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "..\DB_Brige\DB_Brige\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoGrid", "..\DB_Brige\AutoGrid\AutoGrid.csproj", "{1C5A6CBF-1079-4BE2-9158-FED91945352B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbMock", "DbMock\DbMock.csproj", "{7C1F47EF-9B6F-44EF-8876-B46B5BD8308C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{1C5A6CBF-1079-4BE2-9158-FED91945352B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C5A6CBF-1079-4BE2-9158-FED91945352B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C5A6CBF-1079-4BE2-9158-FED91945352B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1F47EF-9B6F-44EF-8876-B46B5BD8308C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1F47EF-9B6F-44EF-8876-B46B5BD8308C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1F47EF-9B6F-44EF-8876-B46B5BD8308C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1F47EF-9B6F-44EF-8876-B46B5BD8308C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

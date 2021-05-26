@@ -40,7 +40,7 @@ namespace Cases
         }
         private void UpdateSearch()
         {
-            tripModels = ListToBindList(Context.Trips.Select(trip=>new TripSearch(trip,trip.)));
+     //       tripModels = ListToBindList(Context.Trips.Select(trip=>new TripSearch(trip,trip.)));
         }
         public DataViewer SearchViewer { get; set; }
         private DataGridProcessor processor;

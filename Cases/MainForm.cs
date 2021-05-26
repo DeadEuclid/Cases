@@ -16,6 +16,7 @@ namespace Cases
         {
             InitializeComponent();
             продажаToolStripMenuItem_Click(null, null);
+            MockContext
         }
         SearchControl SC = new SearchControl { AutoSize = true };
         ReportsControl RC = new ReportsControl { AutoSize = true };
