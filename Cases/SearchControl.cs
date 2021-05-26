@@ -19,10 +19,16 @@ namespace Cases
         public SearchControl()
         {
             InitializeComponent();  
-            SearchViewer = new DataViewer();
+
 
             processor = new DataGridProcessor(dataGridView1, tripModels, typeof(TripInfo));
             tripModels = new BindingList<TripSearch>();
+            List<TripSearch> trips_models = new List<TripSearch>
+                (
+                new TripSearch()
+                
+                );
+
 
         }
         private BindingList<TripSearch> tripModels;
@@ -39,59 +45,17 @@ namespace Cases
                 tripModels = ListToBindList(withoutSeats);
         }
         private void UpdateSearch()
-        {
-            tripModels = ListToBindList(Context.Trips.Select(trip=>new TripSearch(trip,trip.)));
+        { 
+            //tripModels = ListToBindList(Context.Trips.Select(trip=>new TripSearch(trip,trip.)));
+            //foreach (var item in  )
+            //{
+
+            //}
+        
         }
-        public DataViewer SearchViewer { get; set; }
         private DataGridProcessor processor;
         private StationContext Context = new StationContext();
 
-        private void comboBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-         //   TripForm tripForm = new TripForm();
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                tripModels.Where(t => WithFreePlases(t));
-            }
-            else
-            {
-
-
-            }
-        }
-        private int ByedPlases(Trip trip)
-        {
-            return Context.Tickets.Where(tiket => tiket.Trip == trip).Count();
-        }
-        private bool WithFreePlases(TripSearch info)
-        {
-            Trip trip = info.GetTrip;
-            return ByedPlases(trip) == trip.Train.SeatsCount;
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            UpdateSearch(checkBox1.;
-        }
     }
 
 }

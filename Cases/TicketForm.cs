@@ -34,5 +34,15 @@ namespace Cases
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Price_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

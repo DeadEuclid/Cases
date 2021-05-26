@@ -56,6 +56,10 @@ namespace Cases
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -83,16 +87,15 @@ namespace Cases
             this.label7.Location = new System.Drawing.Point(9, 38);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 25);
+            this.label7.Size = new System.Drawing.Size(64, 25);
             this.label7.TabIndex = 9;
-            this.label7.Text = "Номер вагона";
+            this.label7.Text = "Вагон";
             // 
             // wagonNum
             // 
             this.wagonNum.FormattingEnabled = true;
             this.wagonNum.Items.AddRange(new object[] {
-            "1 класс",
-            "2 класс"});
+            "№5 (Второй класс)"});
             this.wagonNum.Location = new System.Drawing.Point(386, 38);
             this.wagonNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.wagonNum.Name = "wagonNum";
@@ -113,8 +116,12 @@ namespace Cases
             // 
             this.seatNum.FormattingEnabled = true;
             this.seatNum.Items.AddRange(new object[] {
-            "1 класс",
-            "2 класс"});
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            ""});
             this.seatNum.Location = new System.Drawing.Point(386, 84);
             this.seatNum.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.seatNum.Name = "seatNum";
@@ -281,9 +288,10 @@ namespace Cases
             this.Price.Location = new System.Drawing.Point(1088, 555);
             this.Price.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(54, 25);
+            this.Price.Size = new System.Drawing.Size(45, 25);
             this.Price.TabIndex = 30;
-            this.Price.Text = "ХХХ";
+            this.Price.Text = "900";
+            this.Price.Click += new System.EventHandler(this.Price_Click);
             // 
             // button2
             // 
@@ -347,6 +355,10 @@ namespace Cases
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
@@ -360,6 +372,43 @@ namespace Cases
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о рейсе";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(648, 59);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(87, 25);
+            this.label19.TabIndex = 10;
+            this.label19.Text = "Барнаул";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(677, 36);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(97, 25);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Рубцовск";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(222, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(62, 25);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "21:30";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(119, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "15";
             // 
             // label18
             // 
@@ -463,5 +512,9 @@ namespace Cases
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }

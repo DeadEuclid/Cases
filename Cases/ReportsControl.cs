@@ -24,10 +24,10 @@ namespace Cases
         public DataGridProcessor RouteReportProcessor { get; set; }
         private void Init()
         {
-            SellReportProcessor = new DataGridProcessor(sellDataGrid);
-            RouteReportProcessor = new DataGridProcessor(routeDataGrid);
-            this.SellReportProcessor.ShowData(new List<TicketReport>(), typeof(TicketReport));
-            this.RouteReportProcessor.ShowData(new List<DemandRoute>(), typeof(DemandRoute));
+            SellReportProcessor = new DataGridProcessor(sellDataGrid,new  List<TicketReport>(), typeof(TicketReport));
+            RouteReportProcessor = new DataGridProcessor(routeDataGrid, new List<DemandRoute>(), typeof(DemandRoute));
+       //     this.SellReportProcessor.ShowData(new List<TicketReport>(), typeof(TicketReport));
+         //   this.RouteReportProcessor.ShowData(new List<DemandRoute>(), typeof(DemandRoute));
 
         }
 

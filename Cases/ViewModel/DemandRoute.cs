@@ -1,4 +1,5 @@
 ﻿using AutoGrid;
+using System.ComponentModel;
 using Viewer;
 
 
@@ -17,19 +18,19 @@ namespace Cases.ViewModel
 
         }
         private StationContext Rep = new StationContext();
-        [Title("№")]
+        [DisplayName("№")]
         public int Number { get; set; }
-        [Title("Маршрут")]
+        [DisplayName("Маршрут")]
         public string RouteTitle { get; set; }
-        [Title("Процент занятых мест")]
+        [DisplayName("Процент занятых мест")]
         public int PercentageOccupidPlaces { get; set; }
-        [Title("Процент занятых мест в 1-ом классе")]
+        [DisplayName("Процент занятых мест в 1-ом классе")]
         public int PercentageOccupidPlacesInFirstClass { get; set; }
-        [Title("Процент занятых мест во 2-ом классе")]
+        [DisplayName("Процент занятых мест во 2-ом классе")]
         public int PercentageOccupidPlacesInSecondClass { get; set; }
-        [Title("Процент занятых льготных меств 1-ом классе")]
+        [DisplayName("Процент занятых льготных меств 1-ом классе")]
         public int PercentageOccupidExemPlacesInFirstClass { get; set; }
-        [Title("Процент льготных мест во 2-ом классе")]
+        [DisplayName("Процент льготных мест во 2-ом классе")]
         public int PercentageOccupidExemPlacesInSecondClass { get; set; }
         public Route GetRoute { get; }
  
