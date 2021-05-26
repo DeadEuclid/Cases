@@ -63,7 +63,7 @@ namespace Cases
             this.checkBox1.TabIndex = 24;
             this.checkBox1.Text = "Показать рейсы с местами";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            //this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // button4
             // 
@@ -75,7 +75,7 @@ namespace Cases
             this.button4.TabIndex = 23;
             this.button4.Text = "Вернуться к системе";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            //this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -87,7 +87,7 @@ namespace Cases
             this.button3.TabIndex = 22;
             this.button3.Text = "Подробнее";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            //this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -108,7 +108,7 @@ namespace Cases
             this.button1.TabIndex = 19;
             this.button1.Text = "Поиск";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            //this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox2
             // 
