@@ -88,11 +88,6 @@
     <Compile Include="TripForm.Designer.cs">
       <DependentUpon>TripForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\Controller.cs" />
-    <Compile Include="ViewModel\DemandRoute.cs" />
-    <Compile Include="ViewModel\TicketReport.cs" />
-    <Compile Include="ViewModel\TripSearch.cs" />
-    <Compile Include="ViewModel\TripInfo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +134,10 @@
     <ProjectReference Include="..\..\DB_Brige\DB_Brige\DB.csproj">
       <Project>{8A461E5B-93BF-49A9-B9A0-35BC998F5231}</Project>
       <Name>DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DbMock\DbMock.csproj">
+      <Project>{7c1f47ef-9b6f-44ef-8876-b46b5bd8308c}</Project>
+      <Name>DbMock</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

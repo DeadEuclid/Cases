@@ -17,19 +17,19 @@ namespace Cases
         public ReportsControl()
         {
             InitializeComponent();
-            Init();
+            //Init();
 
         }
         public DataGridProcessor SellReportProcessor { get; set; }
         public DataGridProcessor RouteReportProcessor { get; set; }
-        private void Init()
-        {
-            SellReportProcessor = new DataGridProcessor(sellDataGrid);
-            RouteReportProcessor = new DataGridProcessor(routeDataGrid);
-            this.SellReportProcessor.ShowData(new List<TicketReport>(), typeof(TicketReport));
-            this.RouteReportProcessor.ShowData(new List<DemandRoute>(), typeof(DemandRoute));
+        //private void Init()
+        //{
+        //    SellReportProcessor = new DataGridProcessor(sellDataGrid);
+        //    RouteReportProcessor = new DataGridProcessor(routeDataGrid);
+        //    this.SellReportProcessor.ShowData(new List<TicketReport>(), typeof(TicketReport));
+        //    this.RouteReportProcessor.ShowData(new List<DemandRoute>(), typeof(DemandRoute));
 
-        }
+
 
         private void ReportsControl1_Load(object sender, EventArgs e)
         {
@@ -37,3 +37,4 @@ namespace Cases
         }
     }
 }
+
