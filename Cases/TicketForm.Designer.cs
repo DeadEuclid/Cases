@@ -48,7 +48,7 @@ namespace Cases
             this.pasportSeria = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.exemType = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.getTicketButton = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.Price = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,10 +56,14 @@ namespace Cases
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.trainNum = new System.Windows.Forms.Label();
+            this.departureTime = new System.Windows.Forms.Label();
+            this.arrivalPoint = new System.Windows.Forms.Label();
+            this.deperturePoint = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -98,6 +102,7 @@ namespace Cases
             this.wagonNum.Name = "wagonNum";
             this.wagonNum.Size = new System.Drawing.Size(180, 33);
             this.wagonNum.TabIndex = 8;
+            this.wagonNum.SelectedIndexChanged += new System.EventHandler(this.wagonNum_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -111,6 +116,7 @@ namespace Cases
             // 
             // seatNum
             // 
+            this.seatNum.Enabled = false;
             this.seatNum.FormattingEnabled = true;
             this.seatNum.Items.AddRange(new object[] {
             "1 класс",
@@ -242,6 +248,7 @@ namespace Cases
             // 
             // exemType
             // 
+            this.exemType.Enabled = false;
             this.exemType.FormattingEnabled = true;
             this.exemType.Items.AddRange(new object[] {
             "1 класс",
@@ -252,16 +259,17 @@ namespace Cases
             this.exemType.Size = new System.Drawing.Size(180, 33);
             this.exemType.TabIndex = 26;
             // 
-            // button1
+            // getTicketButton
             // 
-            this.button1.Location = new System.Drawing.Point(875, 610);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 45);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Оформить и распечатать";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.getTicketButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.getTicketButton.Location = new System.Drawing.Point(875, 610);
+            this.getTicketButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.getTicketButton.Name = "getTicketButton";
+            this.getTicketButton.Size = new System.Drawing.Size(300, 45);
+            this.getTicketButton.TabIndex = 28;
+            this.getTicketButton.Text = "Оформить и распечатать";
+            this.getTicketButton.UseVisualStyleBackColor = true;
+            this.getTicketButton.Click += new System.EventHandler(this.getTicketButton_Click);
             // 
             // label17
             // 
@@ -287,6 +295,7 @@ namespace Cases
             // 
             // button2
             // 
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button2.Location = new System.Drawing.Point(13, 612);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
@@ -348,11 +357,15 @@ namespace Cases
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(13, 14);
+            this.groupBox1.Controls.Add(this.trainNum);
+            this.groupBox1.Controls.Add(this.departureTime);
+            this.groupBox1.Controls.Add(this.arrivalPoint);
+            this.groupBox1.Controls.Add(this.deperturePoint);
+            this.groupBox1.Location = new System.Drawing.Point(11, 14);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -360,47 +373,86 @@ namespace Cases
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о рейсе";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 34);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 25);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "№ рейса:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 61);
+            this.label4.Location = new System.Drawing.Point(466, 61);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Время отправления:";
+            this.label4.Size = new System.Drawing.Size(175, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Место прибытия:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(466, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Место отправления:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 61);
+            this.label2.Location = new System.Drawing.Point(11, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Место прибытия:";
+            this.label2.Size = new System.Drawing.Size(206, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Время отправления:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(466, 34);
+            this.label1.Location = new System.Drawing.Point(11, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Место отправления:";
+            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "№ поезда:";
+            // 
+            // trainNum
+            // 
+            this.trainNum.AutoSize = true;
+            this.trainNum.Location = new System.Drawing.Point(127, 36);
+            this.trainNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.trainNum.Name = "trainNum";
+            this.trainNum.Size = new System.Drawing.Size(108, 25);
+            this.trainNum.TabIndex = 5;
+            this.trainNum.Text = "№ поезда:";
+            // 
+            // departureTime
+            // 
+            this.departureTime.AutoSize = true;
+            this.departureTime.Location = new System.Drawing.Point(225, 61);
+            this.departureTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.departureTime.Name = "departureTime";
+            this.departureTime.Size = new System.Drawing.Size(206, 25);
+            this.departureTime.TabIndex = 3;
+            this.departureTime.Text = "Время отправления:";
+            // 
+            // arrivalPoint
+            // 
+            this.arrivalPoint.AutoSize = true;
+            this.arrivalPoint.Location = new System.Drawing.Point(649, 61);
+            this.arrivalPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.arrivalPoint.Name = "arrivalPoint";
+            this.arrivalPoint.Size = new System.Drawing.Size(175, 25);
+            this.arrivalPoint.TabIndex = 1;
+            this.arrivalPoint.Text = "Место прибытия:";
+            // 
+            // deperturePoint
+            // 
+            this.deperturePoint.AutoSize = true;
+            this.deperturePoint.Location = new System.Drawing.Point(673, 36);
+            this.deperturePoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.deperturePoint.Name = "deperturePoint";
+            this.deperturePoint.Size = new System.Drawing.Size(204, 25);
+            this.deperturePoint.TabIndex = 0;
+            this.deperturePoint.Text = "Место отправления:";
             // 
             // TicketForm
             // 
@@ -414,7 +466,7 @@ namespace Cases
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Price);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.getTicketButton);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -452,7 +504,7 @@ namespace Cases
         private System.Windows.Forms.TextBox pasportSeria;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox exemType;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button getTicketButton;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label Price;
         private System.Windows.Forms.Button button2;
@@ -460,9 +512,13 @@ namespace Cases
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label trainNum;
+        private System.Windows.Forms.Label departureTime;
+        private System.Windows.Forms.Label arrivalPoint;
+        private System.Windows.Forms.Label deperturePoint;
     }
 }

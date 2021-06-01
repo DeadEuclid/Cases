@@ -32,11 +32,11 @@ namespace Cases
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.moreInfo = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
+            this.Search = new System.Windows.Forms.Button();
+            this.arrivalPoints = new System.Windows.Forms.ComboBox();
+            this.departurePoints = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -77,70 +77,72 @@ namespace Cases
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // moreInfo
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(1158, 707);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(150, 44);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Подробнее";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.moreInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.moreInfo.Enabled = false;
+            this.moreInfo.Location = new System.Drawing.Point(1158, 707);
+            this.moreInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.moreInfo.Name = "moreInfo";
+            this.moreInfo.Size = new System.Drawing.Size(150, 44);
+            this.moreInfo.TabIndex = 22;
+            this.moreInfo.Text = "Подробнее";
+            this.moreInfo.UseVisualStyleBackColor = true;
+            this.moreInfo.Click += new System.EventHandler(this.moreInfo_Click);
             // 
-            // button2
+            // Clear
             // 
-            this.button2.Location = new System.Drawing.Point(22, 147);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 36);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "Очистка";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Clear.Location = new System.Drawing.Point(22, 147);
+            this.Clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(112, 36);
+            this.Clear.TabIndex = 20;
+            this.Clear.Text = "Очистка";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
             // 
-            // button1
+            // Search
             // 
-            this.button1.Location = new System.Drawing.Point(488, 147);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 36);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Поиск";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Search.Location = new System.Drawing.Point(488, 147);
+            this.Search.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(112, 36);
+            this.Search.TabIndex = 19;
+            this.Search.Text = "Поиск";
+            this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.search_Click);
             // 
-            // comboBox2
+            // arrivalPoints
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.arrivalPoints.FormattingEnabled = true;
+            this.arrivalPoints.Items.AddRange(new object[] {
             "Рубцовск",
             "Барнаул",
             "Новосибирск",
             "Томск",
             "Бийск"});
-            this.comboBox2.Location = new System.Drawing.Point(284, 53);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(316, 33);
-            this.comboBox2.TabIndex = 18;
+            this.arrivalPoints.Location = new System.Drawing.Point(284, 53);
+            this.arrivalPoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.arrivalPoints.Name = "arrivalPoints";
+            this.arrivalPoints.Size = new System.Drawing.Size(316, 33);
+            this.arrivalPoints.TabIndex = 18;
             // 
-            // comboBox1
+            // departurePoints
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.departurePoints.FormattingEnabled = true;
+            this.departurePoints.Items.AddRange(new object[] {
             "Рубцовск",
             "Барнаул",
             "Новосибирск",
             "Томск",
             "Бийск"});
-            this.comboBox1.Location = new System.Drawing.Point(284, 11);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(316, 33);
-            this.comboBox1.TabIndex = 17;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            this.comboBox1.Click += new System.EventHandler(this.comboBox1_Click);
+            this.departurePoints.Location = new System.Drawing.Point(284, 11);
+            this.departurePoints.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.departurePoints.Name = "departurePoints";
+            this.departurePoints.Size = new System.Drawing.Size(316, 33);
+            this.departurePoints.TabIndex = 17;
+            this.departurePoints.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.departurePoints.Click += new System.EventHandler(this.comboBox1_Click);
             // 
             // label3
             // 
@@ -184,6 +186,7 @@ namespace Cases
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1330, 508);
             this.dataGridView1.TabIndex = 27;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // SearchControl
             // 
@@ -193,11 +196,11 @@ namespace Cases
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.moreInfo);
+            this.Controls.Add(this.Clear);
+            this.Controls.Add(this.Search);
+            this.Controls.Add(this.arrivalPoints);
+            this.Controls.Add(this.departurePoints);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -205,6 +208,7 @@ namespace Cases
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "SearchControl";
             this.Size = new System.Drawing.Size(1336, 759);
+            this.Load += new System.EventHandler(this.SearchControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -216,11 +220,11 @@ namespace Cases
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button moreInfo;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.ComboBox arrivalPoints;
+        private System.Windows.Forms.ComboBox departurePoints;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

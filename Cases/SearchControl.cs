@@ -1,6 +1,5 @@
-﻿
-using AutoGrid;
-using Cases.ViewModel;
+﻿using AutoGrid;
+using CasesViews;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,35 +15,33 @@ namespace Cases
 {
     public partial class SearchControl : UserControl
     {
+        StationContext Context = new StationContext();
         public SearchControl()
         {
-            InitializeComponent();  
-            SearchViewer = new DataViewer();
+            InitializeComponent();
+            dataGridView1.DataSource = ViewContext.Searches;
 
-            processor = new DataGridProcessor(dataGridView1, tripModels, typeof(TripInfo));
-            tripModels = new BindingList<TripSearch>();
+            departurePoints.DataSource = Context.Stations.ToList();
+            departurePoints.DisplayMember = "Name";
+
+            arrivalPoints.DataSource = Context.Stations.ToList();
+            arrivalPoints.DisplayMember = "Name";
 
         }
-        private BindingList<TripSearch> tripModels;
-        private BindingList<TripSearch> ListToBindList(List<TripSearch> trips_models)
+        private BindingList<searchView> views;
+        private void UpdateViews()
         {
-            return new BindingList<TripSearch>(trips_models);
+            ViewContext.Searches = new BindingList<searchView>(Context.Trips.ToList().Select((trip, i) => new searchView(i, trip)).ToList());
         }
-        private void UpdateSerch(Station Departure,Station Arrival,DateTime date,bool isWithFreeSeets)
+        private void UpdateViews(Station dep,Station arriv,bool withFreeSeats)
         {
-            var withoutSeats = tripModels.Where(trip => trip.GetDeparturePoint == Departure && trip.GetArrivalPoint == Arrival).ToList();
-            if (isWithFreeSeets)
-                tripModels = ListToBindList(withoutSeats.Where(tripModel => WithFreePlases(tripModel)).ToList());
-            else
-                tripModels = ListToBindList(withoutSeats);
+            ViewContext.Searches = 
+                new BindingList<searchView>
+                (Context.Trips.Where(trip=>
+                (trip.TimeTable.Route.Stations.First().Id==dep.Id&& trip.TimeTable.Route.Stations.Last().Id == arriv.Id) &&
+                (!withFreeSeats|| searchView.freeSeats(trip)))
+                .Select((trip,i) => new searchView(i+1, trip)).ToList());
         }
-        private void UpdateSearch()
-        {
-            tripModels = ListToBindList(Context.Trips.Select(trip=>new TripSearch(trip,trip.)));
-        }
-        public DataViewer SearchViewer { get; set; }
-        private DataGridProcessor processor;
-        private StationContext Context = new StationContext();
 
         private void comboBox1_Click(object sender, EventArgs e)
         {
@@ -56,41 +53,45 @@ namespace Cases
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-         //   TripForm tripForm = new TripForm();
-        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                tripModels.Where(t => WithFreePlases(t));
-            }
-            else
-            {
 
+        }
 
-            }
-        }
-        private int ByedPlases(Trip trip)
-        {
-            return Context.Tickets.Where(tiket => tiket.Trip == trip).Count();
-        }
-        private bool WithFreePlases(TripSearch info)
-        {
-            Trip trip = info.GetTrip;
-            return ByedPlases(trip) == trip.Train.SeatsCount;
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            FindForm().Close();
+        }
+        private void SearchControl_Load(object sender, EventArgs e)
+        {
+            UpdateViews();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Clear_Click(object sender, EventArgs e)
         {
-            UpdateSearch(checkBox1.;
+            UpdateViews();
+        }
+
+        private void moreInfo_Click(object sender, EventArgs e)
+        {
+            var tripForm = new TripForm((searchView)dataGridView1.SelectedRows[0].DataBoundItem);
+            tripForm.ShowDialog();
+        }
+
+        private void search_Click(object sender, EventArgs e)
+        {
+            UpdateViews((Station)departurePoints.SelectedItem, (Station)arrivalPoints.SelectedItem,checkBox1.Checked);
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+                moreInfo.Enabled = true;
+            else
+                moreInfo.Enabled = false;
         }
     }
 

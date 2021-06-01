@@ -30,21 +30,26 @@ namespace Cases
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.trainNum = new System.Windows.Forms.Label();
+            this.departureTime = new System.Windows.Forms.Label();
+            this.arrivalPoint = new System.Windows.Forms.Label();
+            this.deperturePoint = new System.Windows.Forms.Label();
+            this.getTicketButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.SCSeets = new System.Windows.Forms.Label();
+            this.FCSeets = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.FCEP = new System.Windows.Forms.Label();
+            this.SCP = new System.Windows.Forms.Label();
+            this.FCP = new System.Windows.Forms.Label();
+            this.SCEP = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -57,10 +62,14 @@ namespace Cases
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.trainNum);
+            this.groupBox1.Controls.Add(this.departureTime);
+            this.groupBox1.Controls.Add(this.arrivalPoint);
+            this.groupBox1.Controls.Add(this.deperturePoint);
             this.groupBox1.Location = new System.Drawing.Point(20, 20);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
@@ -70,55 +79,97 @@ namespace Cases
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Данные о рейсе";
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(14, 34);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(95, 25);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "№ рейса:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 61);
+            this.label4.Location = new System.Drawing.Point(466, 61);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(206, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Время отправления:";
+            this.label4.Size = new System.Drawing.Size(175, 25);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Место прибытия:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(466, 36);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(204, 25);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Место отправления:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 61);
+            this.label2.Location = new System.Drawing.Point(11, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(175, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Место прибытия:";
+            this.label2.Size = new System.Drawing.Size(206, 25);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Время отправления:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(466, 34);
+            this.label1.Location = new System.Drawing.Point(11, 36);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Место отправления:";
+            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "№ поезда:";
             // 
-            // button1
+            // trainNum
             // 
-            this.button1.Location = new System.Drawing.Point(1027, 279);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Оформить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.trainNum.AutoSize = true;
+            this.trainNum.Location = new System.Drawing.Point(127, 36);
+            this.trainNum.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.trainNum.Name = "trainNum";
+            this.trainNum.Size = new System.Drawing.Size(108, 25);
+            this.trainNum.TabIndex = 5;
+            this.trainNum.Text = "№ поезда:";
+            // 
+            // departureTime
+            // 
+            this.departureTime.AutoSize = true;
+            this.departureTime.Location = new System.Drawing.Point(225, 61);
+            this.departureTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.departureTime.Name = "departureTime";
+            this.departureTime.Size = new System.Drawing.Size(206, 25);
+            this.departureTime.TabIndex = 3;
+            this.departureTime.Text = "Время отправления:";
+            // 
+            // arrivalPoint
+            // 
+            this.arrivalPoint.AutoSize = true;
+            this.arrivalPoint.Location = new System.Drawing.Point(649, 61);
+            this.arrivalPoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.arrivalPoint.Name = "arrivalPoint";
+            this.arrivalPoint.Size = new System.Drawing.Size(175, 25);
+            this.arrivalPoint.TabIndex = 1;
+            this.arrivalPoint.Text = "Место прибытия:";
+            // 
+            // deperturePoint
+            // 
+            this.deperturePoint.AutoSize = true;
+            this.deperturePoint.Location = new System.Drawing.Point(673, 36);
+            this.deperturePoint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.deperturePoint.Name = "deperturePoint";
+            this.deperturePoint.Size = new System.Drawing.Size(204, 25);
+            this.deperturePoint.TabIndex = 0;
+            this.deperturePoint.Text = "Место отправления:";
+            // 
+            // getTicketButton
+            // 
+            this.getTicketButton.Enabled = false;
+            this.getTicketButton.Location = new System.Drawing.Point(1027, 279);
+            this.getTicketButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.getTicketButton.Name = "getTicketButton";
+            this.getTicketButton.Size = new System.Drawing.Size(160, 45);
+            this.getTicketButton.TabIndex = 1;
+            this.getTicketButton.Text = "Оформить";
+            this.getTicketButton.UseVisualStyleBackColor = true;
+            this.getTicketButton.Click += new System.EventHandler(this.getTicketButton_Click);
             // 
             // button2
             // 
@@ -129,11 +180,12 @@ namespace Cases
             this.button2.TabIndex = 2;
             this.button2.Text = "Назад";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.SCSeets);
+            this.groupBox2.Controls.Add(this.FCSeets);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Location = new System.Drawing.Point(698, 148);
@@ -145,25 +197,25 @@ namespace Cases
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Количество свободных мест";
             // 
-            // label9
+            // SCSeets
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(176, 77);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 25);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "x из n";
+            this.SCSeets.AutoSize = true;
+            this.SCSeets.Location = new System.Drawing.Point(176, 77);
+            this.SCSeets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SCSeets.Name = "SCSeets";
+            this.SCSeets.Size = new System.Drawing.Size(65, 25);
+            this.SCSeets.TabIndex = 5;
+            this.SCSeets.Text = "x из n";
             // 
-            // label6
+            // FCSeets
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(176, 50);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 25);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "x из n";
+            this.FCSeets.AutoSize = true;
+            this.FCSeets.Location = new System.Drawing.Point(176, 50);
+            this.FCSeets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FCSeets.Name = "FCSeets";
+            this.FCSeets.Size = new System.Drawing.Size(65, 25);
+            this.FCSeets.TabIndex = 4;
+            this.FCSeets.Text = "x из n";
             // 
             // label7
             // 
@@ -187,9 +239,10 @@ namespace Cases
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.FCEP);
+            this.groupBox3.Controls.Add(this.SCP);
+            this.groupBox3.Controls.Add(this.FCP);
+            this.groupBox3.Controls.Add(this.SCEP);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label11);
@@ -204,35 +257,45 @@ namespace Cases
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Тарифы";
             // 
-            // label17
+            // FCEP
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(174, 86);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(62, 25);
-            this.label17.TabIndex = 9;
-            this.label17.Text = "ххххх";
+            this.FCEP.AutoSize = true;
+            this.FCEP.Location = new System.Drawing.Point(579, 59);
+            this.FCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FCEP.Name = "FCEP";
+            this.FCEP.Size = new System.Drawing.Size(62, 25);
+            this.FCEP.TabIndex = 10;
+            this.FCEP.Text = "ххххх";
             // 
-            // label16
+            // SCP
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(174, 59);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(62, 25);
-            this.label16.TabIndex = 8;
-            this.label16.Text = "ххххх";
+            this.SCP.AutoSize = true;
+            this.SCP.Location = new System.Drawing.Point(174, 86);
+            this.SCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SCP.Name = "SCP";
+            this.SCP.Size = new System.Drawing.Size(62, 25);
+            this.SCP.TabIndex = 9;
+            this.SCP.Text = "ххххх";
             // 
-            // label15
+            // FCP
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(579, 86);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(62, 25);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "ххххх";
+            this.FCP.AutoSize = true;
+            this.FCP.Location = new System.Drawing.Point(174, 59);
+            this.FCP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FCP.Name = "FCP";
+            this.FCP.Size = new System.Drawing.Size(62, 25);
+            this.FCP.TabIndex = 8;
+            this.FCP.Text = "ххххх";
+            // 
+            // SCEP
+            // 
+            this.SCEP.AutoSize = true;
+            this.SCEP.Location = new System.Drawing.Point(579, 86);
+            this.SCEP.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SCEP.Name = "SCEP";
+            this.SCEP.Size = new System.Drawing.Size(62, 25);
+            this.SCEP.TabIndex = 7;
+            this.SCEP.Text = "ххххх";
             // 
             // label10
             // 
@@ -284,7 +347,7 @@ namespace Cases
             this.label13.TabIndex = 2;
             this.label13.Text = "Второй класс льгота";
             // 
-            // RouteForm
+            // TripForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,11 +355,11 @@ namespace Cases
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.getTicketButton);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "RouteForm";
+            this.Name = "TripForm";
             this.Text = "Данные о рейсе";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -311,25 +374,30 @@ namespace Cases
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label departureTime;
+        private System.Windows.Forms.Label arrivalPoint;
+        private System.Windows.Forms.Label deperturePoint;
+        private System.Windows.Forms.Button getTicketButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label SCSeets;
+        private System.Windows.Forms.Label FCSeets;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label trainNum;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label SCP;
+        private System.Windows.Forms.Label FCP;
+        private System.Windows.Forms.Label SCEP;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label FCEP;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

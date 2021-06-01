@@ -34,8 +34,8 @@ namespace Cases
             this.routeDataGrid = new System.Windows.Forms.DataGridView();
             this.SellReport = new System.Windows.Forms.TabPage();
             this.sellDataGrid = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.startTime = new System.Windows.Forms.DateTimePicker();
+            this.endTime = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,21 +110,23 @@ namespace Cases
             this.sellDataGrid.Size = new System.Drawing.Size(1312, 803);
             this.sellDataGrid.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // startTime
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(75, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 30);
-            this.dateTimePicker1.TabIndex = 1;
+            this.startTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startTime.Location = new System.Drawing.Point(75, 44);
+            this.startTime.Name = "startTime";
+            this.startTime.Size = new System.Drawing.Size(200, 30);
+            this.startTime.TabIndex = 1;
+            this.startTime.ValueChanged += new System.EventHandler(this.startTime_ValueChanged);
             // 
-            // dateTimePicker2
+            // endTime
             // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(347, 44);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 30);
-            this.dateTimePicker2.TabIndex = 2;
+            this.endTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.endTime.Location = new System.Drawing.Point(347, 44);
+            this.endTime.Name = "endTime";
+            this.endTime.Size = new System.Drawing.Size(200, 30);
+            this.endTime.TabIndex = 2;
+            this.endTime.ValueChanged += new System.EventHandler(this.endTime_ValueChanged);
             // 
             // label1
             // 
@@ -163,8 +165,8 @@ namespace Cases
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.endTime);
+            this.Controls.Add(this.startTime);
             this.Controls.Add(this.tabControl1);
             this.Name = "ReportsControl";
             this.Size = new System.Drawing.Size(1976, 955);
@@ -184,8 +186,8 @@ namespace Cases
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage SellReport;
         private System.Windows.Forms.TabPage RouteReport;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker startTime;
+        private System.Windows.Forms.DateTimePicker endTime;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
